@@ -1,0 +1,24 @@
+export type IngredientType = 'BUN_BOTTOM' | 'BUN_TOP' | 'MEAT' | 'CHICKEN' | 'CHEESE';
+
+export interface IngredientCofig {
+  id: IngredientType;
+  name: string;
+  price: number;
+  max: number;
+  color: string;
+}
+
+export const INGREDIENTS: Record<IngredientType, IngredientCofig> = {
+  BUN_BOTTOM: { id: 'BUN_BOTTOM', name: 'Pan Base', price: 2.0, max: 1, color: '#D2B48C' },
+  MEAT:       { id: 'MEAT',       name: 'Carne Angus', price: 4.5, max: 4, color: '#5D2906' },
+  CHICKEN:    { id: 'CHICKEN',    name: 'Pollo Crispy', price: 3.5, max: 2, color: '#F39C12' },
+  CHEESE:     { id: 'CHEESE',     name: 'Queso Cheddar', price: 1.5, max: 2, color: '#F1C40F' },
+  BUN_TOP:    { id: 'BUN_TOP',    name: 'Pan Tapa', price: 1.0, max: 1, color: '#D2B48C' },
+};
+
+export const UI_COLORS = {
+  primary: '#E67E22', // Naranja Hamburguesa
+  background: '#0A0A0A',
+  surface: '#1A1A1A',
+  text: '#FFFFFF',
+};
